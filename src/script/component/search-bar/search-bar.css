@@ -1,0 +1,18 @@
+input[type="search"] {
+	background-color: #f8f8f8;
+	border: 0;
+}
+
+input[type="search"]::placeholder {
+	font-size: 0.8rem;
+	color: $gray-500;
+}
+
+.search-container {
+	display: flex;
+}
+
+.search-container .form-control {
+	padding-left: 3rem;
+}
+
