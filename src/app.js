@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
+import './style/style.css';
 
 
 // header and information / static content

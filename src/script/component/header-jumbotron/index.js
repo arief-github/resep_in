@@ -1,4 +1,5 @@
 import "./jumbo.css";
+import ImageHero from "../../../assets/images/img-hero.svg";
 
 class HeaderJumbotron extends HTMLElement {
 	connectedCallback() {
@@ -23,7 +24,7 @@ class HeaderJumbotron extends HTMLElement {
                         </a>
                     </div>
                     <div class="col-sm-12 col-md-7">
-                        <img src="" alt="${this.title}">
+                        <img src="${ImageHero}" alt="${this.title}">
                     </div>
                 </div>
             </div>
