@@ -1,20 +1,11 @@
 class DropdownSort extends HTMLElement {
+
     connectedCallback() {
-
+        this.render();
     }
-
-    selectedSort() {
-    	const dropdownItem = document.querySelectorAll(".dropdown-item");
-    	dropdownItem.forEach((item) => {
-    		item.addEventListener("click", () => {
-    			document.querySelector("#sort-selected").innerText = this.textContent;
-    		})
-    	})
-    }
-
     render() {
-      return this.innerHTML = ` 
-		<div class="dropdown d-none d-md-block">
+        this.innerHTML = `
+        <div class="dropdown d-none d-md-block">
             <button class="btn btn-dark rounded-pill dropdown-toggle" type="button" data-toggle="dropdown">
                 Sort by: <span id="sort-selected">Newest</span>
             </button>
@@ -25,8 +16,15 @@ class DropdownSort extends HTMLElement {
                 <a class="dropdown-item" href="javascript:void(0)">Rating (Highests)</a>
                 <a class="dropdown-item" href="javascript:void(0)">Rating (Lowest)</a>
             </div>
-        </div>
-	`;
+        </div>`;
+
+        const dropdownItem = document.querySelectorAll(".dropdown-item");
+        dropdownItem.forEach(item => {
+            item.addEventListener("click", function() {
+                // save reference menu from user click
+                document.querySelector("#sort-selected").innerText = this.textContent;
+            });
+        })
     }
 }
 
