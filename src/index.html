@@ -11,7 +11,6 @@
     <header-nav></header-nav>
     <main class="container">
         <header-jumbotron title="Resep.in" description="Cari resep masakan dan minuman favorit kamu disini. tersedia lengkap 😊🎉" action="Ayo jelajahi!"></header-jumbotron>
-        
         <section class="row mb-2">
             <div class="col-sm-12 col-md-3">
                 <h5 class="pt-1">Receipes 👩‍🍳</h5>
@@ -25,6 +24,16 @@
                         <dropdown-sort></dropdown-sort>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="d-none d-md-block col-3">
+                <div class="d-flow-root">
+                    <h6 class="float-left">Filter by:</h6>
+                    <a href="javascript:void(0)" id="clearFilter" class="text-filter float-right">Clear filter</a>
+                </div>
+                <hr>
+                <receipe-category></receipe-category>
             </div>
         </section>
     </main>
