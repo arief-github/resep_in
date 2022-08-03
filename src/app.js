@@ -12,3 +12,6 @@ import "./script/component/search-bar";
 import "./script/component/dropdown-sort";
 import "./script/component/receipe-category";
 
+import main from './script/view/main.js';
+
+document.addEventListener("DOMContentLoaded", main);

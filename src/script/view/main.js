@@ -1,8 +1,10 @@
 import "../component/search-bar";
+import "../component/receipe-list";
 import DataSource from "../data/data-source.js";
 
 const main = () => {
 	const searchElement = document.querySelector("search-bar");
+	const receipeListElement = document.querySelector("receipe-list");
 
 	const onButtonSearchClicked = () => {
 		searchRecipe(searchElement.value);
@@ -18,6 +20,10 @@ const main = () => {
 	}
 
 	searchElement.clickEvent = onButtonSearchClicked;
+
+	const renderResult = (results) => {
+		receipeListElement.receipes = results;
+	}
 
 	// tampil default
 	searchRecipe('Dessert');
