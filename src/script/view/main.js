@@ -6,6 +6,7 @@ const main = () => {
 	const searchElement = document.querySelector("search-bar");
 	const receipeListElement = document.querySelector("receipe-list");
 	const loadingElement = document.querySelector("#loader-text");
+	const clearFilterElement = document.querySelector("#clearFilter");
 
 	const onButtonSearchClicked = () => {
 		searchRecipe(searchElement.value);
@@ -17,8 +18,9 @@ const main = () => {
 			const result = await DataSource.searchRecipe(keyword);
 			// console.log(result);
 			renderResult(result);
-		} catch(error){
-			console.error(error);
+		} catch(message){
+			// console.error(error);
+			fallbackResult(message);
 		}
 	}
 
@@ -29,8 +31,31 @@ const main = () => {
 		receipeListElement.receipes = results;
 	}
 
+	const fallbackResult = (message) => {
+		loadingElement.style.display = 'none';
+		receipeListElement.renderError(message);
+	}
+
 	// tampil default
 	searchRecipe('Dessert');
+
+	// fitur filter
+	// filter categories
+	const checkBox = document.querySelectorAll("input[type=checkbox]");
+	checkBox.forEach((item) => {
+		item.addEventListener('click', function() {
+			const category = this.getAttribute("data-item");
+			searchRecipe(category);
+		})
+	});
+
+	// clear filter categories
+	clearFilter.addEventListener("click", function() {
+		const checkBox = document.querySelectorAll("input[type=checkbox]");
+		checkBox.forEach((item) => {
+			item.checked = false;
+		})
+	});
 }
 
 export default main;
