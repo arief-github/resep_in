@@ -13,7 +13,8 @@ const main = () => {
 	const searchRecipe = async(keyword) => {
 		try {
 			const result = await DataSource.searchRecipe(keyword);
-			console.log(result);
+			// console.log(result);
+			renderResult(result);
 		} catch(error){
 			console.error(error);
 		}
