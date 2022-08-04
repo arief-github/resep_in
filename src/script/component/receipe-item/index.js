@@ -11,7 +11,7 @@ class ReceipeItem extends HTMLElement {
         this.innerHTML = `
 			<div class="col mb-4">
 				<div class="card card-receipe data-id="${this._item.id}">
-					<img src="https://spoonacular.com/receipeImages/${this._item.image}" class="card-img card-img-top" alt="${this._item.title}"/>
+					<img src="https://spoonacular.com/recipeImages/${this._item.image}" class="card-img card-img-top" alt="${this._item.title}"/>
 					<div class="card-body">
 						<h5 class="card-title text-truncate">${this._item.title}</h5>
                         <p class="card-text">
