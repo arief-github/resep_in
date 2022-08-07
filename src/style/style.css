@@ -90,3 +90,102 @@
 .loader-default[data-inverse]:after {
     animation-direction: reverse
 }
+
+/* DETAIL RECIPE PAGE */
+.details h5 {
+    font-family: Poppins, sans-serif;
+}
+
+.details hr {
+    border: .1px dashed gray;
+}
+
+.details p,
+span,
+li {
+    font-family: Poppins, sans-serif;
+    font-size: 12px;
+}
+
+.details .img-shadow {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 15px 2px;
+}
+
+.details .author {
+    font-size: 0.7rem;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.details .author::before {
+    content: "by ";
+    font-size: 0.6rem;
+    text-transform: lowercase;
+}
+
+.details .recipe-details .icon-detail-svg {
+    width: 32px;
+    background-color: #fce0dc;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.details .card-inggredient {
+    padding: 4%;
+    border-width: 1px 1px 0px;
+    border-style: solid solid solid;
+    border-color: rgb(234, 234, 234) rgb(234, 234, 234) rgb(234, 234, 234);
+    border-image: initial;
+    border-bottom: 0px;
+}
+
+.details .card-inggredient::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    width: 94%;
+    height: 26px;
+    background: url('../assets/images/separator-bottom.gif') left center repeat-x;
+}
+
+.details .card-inggredient .ingredients {
+    padding: 0 0 10px 0;
+    margin: 0px;
+    list-style: none;
+    margin-block-start: 0;
+}
+
+.details .card-inggredient .ingredients li {
+    padding: 10px;
+}
+
+.details .card-inggredient .ingredients li::nth-child(2n+1) {
+    background-color: #fce0dc66;
+}
+
+.details .methods {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    margin-block-start: 0;
+}
+
+.details .methods li {
+    counter-increment: method 1;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(240, 242, 235);
+}
+
+.details .methods li::before {
+    content: counter(method) ".";
+    font-weight: 700;
+    font-size: 23px;
+    margin-right: 8px;
+    float: left;
+    line-height: 1;
+}
