@@ -1,4 +1,4 @@
-import '../receipe-item';
+import '../receipe-item/';
 import './receipe-list.css';
 
 class ReceipeList extends HTMLElement {

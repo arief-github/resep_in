@@ -1,0 +1,13 @@
+.detail-recipe {
+	font-size: 0.7rem;
+	background-color: transparent;
+	padding: 0;
+}
+
+.detail-recipe .detail-recipe-item a {
+	color: #6c757d;
+}
+
+.detail-recipe .detail-recipe-item.active {
+	color: #000;
+}

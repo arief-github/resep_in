@@ -43,6 +43,33 @@
             </div>
         </section>
     </main>
+    <!-- detail recipe page but with display none  -->
+    <section class="details container mb-5" style="display:none;">
+        <detail-recipe currentpage=""></detail-recipe>
+        <div class="row">
+            <div class="col-12 col-md-5 mb-2">
+                <img src="" class="img-fluid img-shadow" id="detailImage">
+            </div>
+            <div class="col-12 col-md-7">
+                <detail-header title="" sourcename="" preparationminutes="" servings="" summary="">
+                </detail-header>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-md-5 mb-4">
+                <h5>Ingredients</h5>
+                <hr>
+                <div class="card-inggredient px-3 py-3">
+                    <ul class="ingredients"></ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-7 mb-4">
+                <h5>Method</h5>
+                <hr>
+                <ol class="methods"></ol>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
