@@ -1,0 +1,25 @@
+.card-author {
+    margin-top: 10px;
+    font-size: 9px;
+    color: #525355;
+}
+
+.card-author .card {
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.card-author .card a {
+    text-decoration: none;
+}
+
+.card-author .card a:visited {
+    color: #525355;
+}
+
+.my-3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

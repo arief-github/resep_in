@@ -6,6 +6,7 @@ import './style/style.css';
 // header and information / static content
 import "./script/component/header-nav/";
 import "./script/component/header-jumbotron/";
+import "./script/component/side-footer/";
 
 // import search and dropdown list
 import "./script/component/search-bar";
