@@ -23,7 +23,7 @@ class DetailRecipe extends HTMLElement {
 			<nav class="d-flow-root aria-label="detailrecipe">
 				<ol class="detailrecipe mt-2 float-left">
 					<li class="detailrecipe-item"> <a href="#">Recipe</a></li>
-					<li class="detailrecipe-item active" aria-current="page">${this.currentPage}</li>
+					<li class="detailrecipe-item active" aria-current="page">${this.currentpage}</li>
 				</ol>
 				<button id="backToHomePage" class="btn btn-outline-danger rounded=pill float-right" ><i class="fa fa-arrow-left"></i> Back</button>
 			</nav>

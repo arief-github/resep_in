@@ -40,7 +40,7 @@ class ReceipeItem extends HTMLElement {
             }
         }
 
-        const renderResult = (result) => {
+        const renderResult = (results) => {
             loadingElement.style.display = 'none';
 
             // switch back to landingpage
@@ -48,7 +48,7 @@ class ReceipeItem extends HTMLElement {
 
             // detail item element
             const detailRecipeElement = document.querySelector("detail-recipe");
-            detailRecipeElement.currentpage = results.title;
+            detailRecipeElement.currentPage = results.title;
 
             // image recipe
             $('#detailImage').attr("src", results.image);
