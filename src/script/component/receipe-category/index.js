@@ -13,7 +13,7 @@ class ReceipeCategories extends HTMLElement {
         DataReceipeCategories.categories.map((category, index1) => {
             htmlContent += ` 
 				<div class="d-flow-root mt-4">
-					<h6 class="float-left">${category.name}</h6>
+					<h6 class="pull-left">${category.name}</h6>
 				</div>
 			`
             // mapping item category
