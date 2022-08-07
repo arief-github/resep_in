@@ -18,5 +18,9 @@ import './script/component/detail-header/';
 import './script/component/detail-recipe/';
 
 import main from './script/view/main.js';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 document.addEventListener("DOMContentLoaded", main);

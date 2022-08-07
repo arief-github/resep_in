@@ -16,18 +16,28 @@ class ReceipeItem extends HTMLElement {
         const loadingElement = document.querySelector('#loader-text');
         this.innerHTML = `
             <div class="col mb-4">
-                <div class="card card-receipe" data-id="${this._item.id}">
-                    <img src="https://spoonacular.com/recipeImages/${this._item.image}" class="card-img card-img-top" alt="${this._item.title}"/>
-                    <div class="card-body">
-                        <h5 class="card-title text-truncate">${this._item.title}</h5>
-                        <p class="card-text">
-                            <span class="float-left"><img src="" class="icon-svg"> SERVES ${this._item.servings}</span>
-                            <span class="float-right"><i class="fa fa-clock-o"></i> ${this._item.readyInMinutes} MINS</span>
-                        </p>
-                    </div>  
-                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor=".jumbotron">
+                         <div class="card card-receipe" data-id="${this._item.id}">
+                            <img src="https://spoonacular.com/recipeImages/${this._item.image}" class="card-img card-img-top" alt="${this._item.title}"/>
+                            <div class="card-body">
+                                <h5 class="card-title text-truncate">${this._item.title}</h5>
+                                <p class="card-text">
+                                    <span class="float-left"><img src="" class="icon-svg"> SERVES ${this._item.servings}</span>
+                                    <span class="float-right"><i class="fa fa-clock-o"></i> ${this._item.readyInMinutes} MINS</span>
+                                </p>
+                            </div>  
+                        </div>
+                </div>      
             </div>
         `;
+
+        let delay = 0;
+        $('[data-aos]').each(function() {
+            if($(this).is(":visible") === true) {
+                delay = delay + 400;
+                $(this).attr('data-aos-delay', delay);
+            }
+        });
 
         // DataSource Information Receipe
         const informationReceipe = async (id) => {
