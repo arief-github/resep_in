@@ -1,4 +1,5 @@
 import './nav.css';
+import BrandIcon from '../../../assets/images/favicon.png';
 
 class HeaderNav extends HTMLElement {
 	connectedCallback() {
@@ -6,7 +7,7 @@ class HeaderNav extends HTMLElement {
 			<header class="container my-3">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
                 <a class="navbar-brand" href="#">
-                    <img src="" class="brand-icon"> Resep.in
+                    <img src="${BrandIcon}" class="brand-icon"> Resep.in
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                     <span class="navbar-toggler-icon"></span>

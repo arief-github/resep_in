@@ -1,4 +1,7 @@
 import './detail-header.css';
+import IconClock from '../../../assets/images/clock-solid.svg';
+import IconHatChef from "../../../assets/images/hat-chef-solid.svg";
+import IconUtensils from "../../../assets/images/utensils-solid.svg";
 
 class DetailHeader extends HTMLElement {
     set update(value) {
@@ -24,25 +27,25 @@ class DetailHeader extends HTMLElement {
         this.summary = this.getAttribute('summary') || null;
 
         this.innerHTML = `
-			     <h5>${this.title}</h5>
+			       <h5>${this.title}</h5>
 			        <p class="author">${this.sourcename}</p>
 			        <div class="row recipe-details">
 			          <div class="col-12 col-md-4">
-			            <img src="" class="icon-detail-svg">
+			            <img src="${IconClock}" class="icon-detail-svg">
 			            <span>COOK : ${this.preparationminutes} MINS</span>
 			          </div>
 			          <div class="col-12 col-md-4">
-			            <img src="" class="icon-detail-svg">
+			            <img src="${IconHatChef}" class="icon-detail-svg">
 			            <span>EASY</span>
 			          </div>
 			          <div class="col-12 col-md-4">
-			            <img src="" class="icon-detail-svg">
+			            <img src="${IconUtensils}" class="icon-detail-svg">
 			            <span>SERVES ${this.servings}</span>
 			          </div>
 			          <div class="col-12 mt-3 text-justify">
 			            <p>${this.summary}</p>
 			          </div>
-        		</div>
+			        </div>
 		`
     }
 }

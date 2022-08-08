@@ -1,4 +1,5 @@
 import DataSource from '../../data/data-source.js';
+import IconUtensils from '../../../assets/images/utensils.svg';
 import './receipe-item.css';
 
 class ReceipeItem extends HTMLElement {
@@ -22,7 +23,7 @@ class ReceipeItem extends HTMLElement {
                             <div class="card-body">
                                 <h5 class="card-title text-truncate">${this._item.title}</h5>
                                 <p class="card-text">
-                                    <span class="float-left"><img src="" class="icon-svg"> SERVES ${this._item.servings}</span>
+                                    <span class="float-left"><img src="${IconUtensils}" class="icon-svg"> SERVES ${this._item.servings}</span>
                                     <span class="float-right"><i class="fa fa-clock-o"></i> ${this._item.readyInMinutes} MINS</span>
                                 </p>
                             </div>  

@@ -1,6 +1,36 @@
+.rowflex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.d-flow-root {
+    display: flow-root;
+}
+
+
 /* FONT */
 * {
     font-family: Poppins;
+}
+.text-filter {
+    font-size: 0.7rem;
+    color: #f29a96;
+}
+
+.text-filter:hover {
+    color: #e96d67;
+    text-decoration: none;
+}
+
+.btn {
+    padding: 0.375rem 1rem;
+    font-size: 0.8rem;
+}
+
+.badge {
+    padding: 0.5rem 0.65rem;
 }
 
 /* LOADING */
